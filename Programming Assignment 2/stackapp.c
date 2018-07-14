@@ -1,8 +1,8 @@
 /************************************************************
-*	Name: Tristan Santiago									*
-*	Date: 7/14/2018											*
-*	Description: stack.c: Stack application.				*
-*	implementation.											*
+*	Name: Tristan Santiago									
+*	Date: 7/14/2018											
+*	Description: stack.c: Stack application.				
+*	implementation.											
 ************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,14 +10,14 @@
 #include "dynArray.h"
 
 /****************************************************************
-*		Using stack to check for unbalanced parentheses.		*
+*	Using stack to check for unbalanced parentheses.		
 ****************************************************************/
 /************************************************************
-*							nextChar						*
-*	Description: Returns the next character of the string,	*
-*	once reaches end return '0' (zero).						*
-*	param: 	s pointer to a string							*
-*	pre: s is not null										*
+*	nextChar						
+*	Description: Returns the next character of the string,	
+*	once reaches end return '0' (zero).						
+*	param: 	s pointer to a string							
+*	pre: s is not null										
 ************************************************************/
 char nextChar(char* s)
 {
@@ -31,12 +31,12 @@ char nextChar(char* s)
 		return c;
 }
 /************************************************************
-*						isBalanced							*
-*	Description: Checks whether the (), {}, and [] are		*
-*	balanced or not.										*
-*	param: 	s pointer to a string							*
-*	pre: s is not null										*
-*	post:													*
+*	isBalanced							
+*	Description: Checks whether the (), {}, and [] are		
+*	balanced or not.										
+*	param: 	s pointer to a string							
+*	pre: s is not null										
+*	post:													
 ************************************************************/
 int isBalanced(char* s)
 {		
@@ -98,7 +98,7 @@ int isBalanced(char* s)
 		else {
 
 		}
-	} while (ch != '\0');						// Until the null terminator is located.
+	} while (ch != '\0');							// Until the null terminator is located.
 	/* Delete the array once we have reached the end of the array. */
 	if (sizeDynArr(stack) == 0) {
 		deleteDynArr(stack);
@@ -113,10 +113,6 @@ int isBalanced(char* s)
 int main(int argc, char* argv[]){
 	
 	char* s=argv[1];	
-	//char s[] = "(})";
-	//char s[] = "}{}{[]}()";
-	//char s[] = "{ [}]}";
-	//char s[] = "({[]}))()";
 	int res;
 	printf("Assignment 2\n");
 
